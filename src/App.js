@@ -13,26 +13,26 @@ const App =()=> {
   const dispatch=useDispatch();
   //jaise hi hamri app hoti h render then hamra useEffect chalega
   useEffect(()=>{
-   checkUser()
-
+    const checkUser = () => {
+      auth.onAuthStateChanged((userAuth)=>{
+        if(userAuth){
+          //already login
+          dispatch(loginuser({
+            email:userAuth.email,
+            uid:userAuth.uid,
+            photoURL:userAuth.photoURL,
+            displayName:userAuth.displayName
+          }))
+  
+  
+        }
+      })
+    }
+    checkUser()
 
   },[])
 
-  const checkUser = () => {
-    auth.onAuthStateChanged((userAuth)=>{
-      if(userAuth){
-        //already login
-        dispatch(loginuser({
-          email:userAuth.email,
-          uid:userAuth.uid,
-          photoURL:userAuth.photoURL,
-          displayName:userAuth.displayName
-        }))
-
-
-      }
-    })
-  }
+  
 
   return (
     <>
@@ -50,7 +50,7 @@ const App =()=> {
     }
     </>
    
-  );
+  )
 }
 
 export default App;
