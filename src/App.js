@@ -30,7 +30,7 @@ const App =()=> {
     }
     checkUser()
 
-  },[])
+  },[dispatch])
 
   
 
