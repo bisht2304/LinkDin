@@ -24,14 +24,11 @@ function App() {
         }))
 
 
-      }else{
-        dispatch(logoutuser());
-
       }
     })
 
 
-  },)
+  },[])
 
   return (
     <>
