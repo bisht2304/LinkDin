@@ -1,0 +1,32 @@
+.loginscreen{
+    width:400px;
+    margin:100px auto;
+    text-align: center;
+}
+.loginscreen img{
+    width:200px;
+    margin-bottom:20px;
+}
+.loginscreen input{
+    display: block;
+    height:40px;
+    width: 100%;
+    margin-bottom:10px;
+    padding:0px 10px;
+    
+    border:2px solid #000;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.loginscreen input[type="submit"]{
+    border-radius: 0px;
+    background-color: #0077b5;
+    border:0;
+    color:#fff;
+    letter-spacing:2px;
+    cursor:pointer;
+}
+.loginscreen h4 span{
+    color:#0077b5;
+    cursor:pointer;
+}
