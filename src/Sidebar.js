@@ -9,7 +9,7 @@ function Sidebar() {
   return (
     <div className='sidebar'>
     <div className='sidebar_profile'>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLLzqhucZTUjj--P4T849xgjJ7mL_GXApew&usqp=CAU"></img>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLLzqhucZTUjj--P4T849xgjJ7mL_GXApew&usqp=CAU" alt="shubh"></img>
     <div className='profile_details'>
     <Avatar src={user.photoURL}/>
     <h4>{user.displayName}</h4>

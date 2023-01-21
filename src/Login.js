@@ -76,7 +76,7 @@ function Login() {
     
     <div className='loginscreen'>
     <img src="https://www.seekpng.com/png/detail/371-3715298_advertise-on-
-    linkedin-linkedin-logo-no-background.png"/>
+    linkedin-linkedin-logo-no-background.png" alt="shubh"/>
     {
         signup===true ? (
 <form onSubmit={register}>
