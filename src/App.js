@@ -5,14 +5,20 @@ import Feed from './Feed'
 import Widget from'./Widget'
 import Login from "./Login"
 import { useSelector,useDispatch } from 'react-redux';
-import {selectUser,loginuser,logoutuser} from './features/userSlice';
+import {selectUser,loginuser} from './features/userSlice';
 import { auth } from './firebase';
 
-function App() {
+const App =()=> {
   const user=useSelector(selectUser);
   const dispatch=useDispatch();
   //jaise hi hamri app hoti h render then hamra useEffect chalega
   useEffect(()=>{
+   checkUser()
+
+
+  },[])
+
+  const checkUser = () => {
     auth.onAuthStateChanged((userAuth)=>{
       if(userAuth){
         //already login
@@ -26,9 +32,7 @@ function App() {
 
       }
     })
-
-
-  },[])
+  }
 
   return (
     <>
